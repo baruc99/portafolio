@@ -1,0 +1,31 @@
+/* Navigation.module.css */
+.header {
+    height: 4rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 32px;
+    height: 4rem;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.navigation a {
+    color: #fffefe;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.active a {
+    color: #00cce8;
+    text-decoration: underline;
+    font-weight: bold;
+}

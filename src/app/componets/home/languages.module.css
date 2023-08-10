@@ -1,0 +1,40 @@
+.bgLenguaje {
+    background: #fff;
+    height: 340px;
+}
+
+.sizeimgLenguaje {
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+.boxLenguaje {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card span {
+    font-size: 50px;
+    font-weight: 100 !important;
+    color: #00cce8;
+    letter-spacing: -2px;
+}
+
+.separator-line-thick{
+    margin-top: 3% !important;
+    margin-bottom: 3% !important;
+    height: 4px;
+    /* margin: 0 auto; */
+    width: 30px;
+    margin: 7% auto;
+    background: #d4d4d4;
+}

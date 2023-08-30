@@ -1,0 +1,19 @@
+.border-container {
+    border-left: 2px solid #a396c1;
+    border-right: 2px solid #a396c1;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+  }
+  
+  .line {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: red;
+    transform-origin: left center;
+  }

@@ -29,7 +29,6 @@
 .navigation {
     align-items: center;
     display: flex;
-    /* font-family: exo_2; */
     font-size: 20px;
     font-weight: 400;
     gap: 32px;
@@ -42,7 +41,6 @@
 .navigation a {
     color: #fffefe;
     text-decoration: none;
-    /* font-family: exo_2; */
 }
 
 .navigation a:hover {

@@ -6,6 +6,7 @@ import styles from './page.module.css';
 
 import { useState, useEffect } from 'react';
 import { Description } from './componets/home/description';
+import { Proyects } from './componets/home/Projects';
 
 
 export default function Home() {
@@ -68,6 +69,8 @@ export default function Home() {
       <Development />
 
       <Description />
+
+      <Proyects />
       
     </>
   );

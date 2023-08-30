@@ -1,32 +1,86 @@
 /* Estilo para el contenedor del video */
 .hVideo {
-    height: 47rem;
-  }
+  height: 47rem;
+}
+
+/* Estilo para el contenedor del texto */
+.bgIndex {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el texto */
+.custom-text {
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Estilo para el párrafo de texto */
+.textTyping {
+  color: #ffffff;
+  text-transform: initial;
+  font-size: 25px;
+  text-align: center;
+  border-right: 3px solid #a396c1;
+  font-weight: 200;
+}
+
+.border-container {
+  border-left: 2px solid #a396c1;
+  border-right: 2px solid #a396c1;
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+/* button styling */
+.button {
+  --animation-color: #fff;
+  --border-right: 6px;
+  --fs-size: 3rem;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  color: transparent;
+  font-family: "Arial";
+  font-size: var(--fs-size);
+  letter-spacing: 3px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  -webkit-text-stroke: 1px var(--animation-color);
+  border-right: var(--border-right) solid #a396c1;
+  box-sizing: border-box;
+  color: var(--animation-color);
+  content: attr(data-text);
+  inset: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: 0.5s;
+  white-space: pre-wrap;
+  width: 0%;
   
-  /* Estilo para el contenedor del texto */
-  .bgIndex {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Estilo para el texto */
-  .custom-text {
-    color: #ffffff;
-    font-size: 45px;
-    font-weight: 400;
-  }
-  
-  /* Estilo para el párrafo de texto */
-  .textTyping {
-    color: #ffffff;
-    text-transform: initial;
-    font-size: 25px;
-  }
-  
+}
+
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}

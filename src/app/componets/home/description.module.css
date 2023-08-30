@@ -1,0 +1,36 @@
+.border-container {
+    border-left: 2px solid #a396c1;
+    border-right: 2px solid #a396c1;
+}
+
+.height-description {
+    height: 32.5rem;
+}
+
+.card {
+    background-color: #fff;
+    height: 19.6875rem;
+    border-radius: 2rem;
+}
+
+.card img{
+    height: 15rem;
+}
+
+.contexts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contexts .box:nth-child(1){
+    flex-basis: calc(40%);
+}
+
+.contexts .box:nth-child(2){
+    flex-basis: calc(60%);
+    color: #170B35;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding: 4% 16% 4% 0;
+}

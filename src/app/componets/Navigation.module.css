@@ -3,21 +3,46 @@
     height: 4rem;
 }
 
-.navigation {
+.flex-container {
+    align-items: flex-start;
     display: flex;
+    justify-content: space-between;
+}
+
+.div-logo {
+    align-items: center;
+    display: flex;
+    height: 4rem;
     justify-content: center;
-    list-style: none;
+    width: 4rem;
+}
+
+.item-logo {
+    height: 2.5rem;
+}
+
+.ig-logo {
+    height: 30px;
+    padding: 0 0 0.3rem 0.7rem;
+}
+
+.navigation {
+    align-items: center;
+    display: flex;
+    /* font-family: exo_2; */
+    font-size: 20px;
+    font-weight: 400;
     gap: 32px;
     height: 4rem;
-    align-items: center;
-    font-weight: 700;
-    font-size: 20px;
+    justify-content: end;
+    list-style: none;
     text-transform: capitalize;
 }
 
 .navigation a {
     color: #fffefe;
     text-decoration: none;
+    /* font-family: exo_2; */
 }
 
 .navigation a:hover {
@@ -25,7 +50,17 @@
 }
 
 .active a {
-    color: #00cce8;
-    text-decoration: underline;
+    /* color: #00cce8; */
+    border-radius: 10px;
+    border: 2px solid #a396c1;
     font-weight: bold;
+    padding: 6px;
+    text-decoration: underline;
+}
+
+.border-container {
+    border-left: 2px solid #a396c1;
+    border-top: 2px solid #a396c1;
+    border-right: 2px solid #a396c1;
+    border-radius: 20px 20px 0 0;
 }

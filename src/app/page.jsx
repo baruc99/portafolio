@@ -1,21 +1,18 @@
 'use client'
 import BackgroundVideo from './componets/home/BackgroundVideo';
 import { Languages } from './componets/home/languages';
+import { Development } from './componets/home/development';
 import styles from './page.module.css';
 
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
-
-
 import { useState, useEffect } from 'react';
+import { Description } from './componets/home/description';
 
 
 export default function Home() {
   const paragraphs = [
-    "Mi nombre es Baruc Sánchez",
-    "soy desarrollador de Software",
-    "me especializo en aplicaciones Web, Landing Page, sitios Web, etc"
+    "Bienvenido a Box Code   ",
+    "desarrollamos Software   ",
+    "Front-End y Back-End   "
   ];
 
   const [currentParagraph, setCurrentParagraph] = useState(0);
@@ -32,25 +29,46 @@ export default function Home() {
 
       const nextChar = paragraphs[currentParagraph][currentText.length];
       setCurrentText((prevText) => prevText + nextChar);
+
     };
 
-    const timer = setTimeout(typeText, 200); // Cambia este valor para ajustar la velocidad de tipiado
+
+    const timer = setTimeout(typeText, 200);
 
     return () => clearTimeout(timer);
   }, [currentText, currentParagraph]);
 
   return (
     <>
-      <div className={styles['hVideo']}>
-        <BackgroundVideo />
-        <div className={styles['bgIndex']}>
-          <div className={`${styles['custom-text']}  ${styles['rotation-highlight']}`}>Hola,</div>
-          <div className={`mt-5`}>
-            <p className={`${styles['textTyping']}`}>{currentText}</p>
+      <div className={`container ${styles['border-container']}`}>
+        <div className={styles['hVideo']}>
+          <BackgroundVideo />
+          <div className={styles['bgIndex']}>
+
+            <button data-text="Awesome" className={styles.button}>
+              <span className={styles['actual-text']}>
+                &nbsp;&nbsp;Constructores&nbsp;<br />&nbsp;&nbsp;de&nbsp;experiencias&nbsp;
+              </span>
+              < br />
+              <span className={styles['hover-text']}>
+                &nbsp;&nbsp;Constructores&nbsp;<br />&nbsp;&nbsp;de&nbsp;experiencias&nbsp;
+              </span>
+            </button>
+
+            <div className={`mt-5`}>
+              <p className={`${styles['textTyping']}`}>{currentText}</p>
+            </div>
+
           </div>
         </div>
-      </div>
+      </div >
+
       <Languages />
+
+      <Development />
+
+      <Description />
+      
     </>
   );
 }

@@ -1,61 +1,55 @@
 // languages.jsx
 import styles from './languages.module.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
+function PurpleSquare({ imagePath }) {
+    return (
+        <div className={`borde-purple ${styles['square']} centrar`}>
+            <img src={imagePath} alt="" />
+        </div>
+    );
+}
 
 
 export function Languages() {
     return (
-        <div className={`${styles['bgLenguaje']}`}>
-            <div className='container'>
-                {/* <div> <FontAwesomeIcon
-                    icon={faCheck}
-                    className="fas fa-check"
-                    style={{ color: "red", fontSize: 64 }}
-                /></div> */}
-                <div className='row'>
-                    <div className={` col-md-3 ${styles['card']}`}>
-                        <div className={`${styles['card']}`}>
-                            <span>01</span>
-                            <p>Estrategia</p>
-                            <div className={`${styles['separator-line-thick']}`}></div>
+        <>
+            <div className={`container ${styles['border-container']} ${styles['cards']} sin-padding`}>
+                <div className={`row ${styles['posRelative']}`}>
+                    <div className="col-md-1"></div>
+                    <div className={`col-md ${styles['pading-text']} ${styles['posAbsolute']} `}>
+                        <div className="row borde-purple">
+                            <div className={`col-md-4 centrar ${styles['iniciarTrabajo']}`}>
+                                Inicia tu proyecto
+                            </div>
+                            <div className={`col-md-8 p-4 ${styles['textCard']}`}>
+                                ¿Interesado en trabajar juntos?
+                                <br />
+                                Compraré el café para que charlemos.
+                            </div>
                         </div>
-
                     </div>
-                    <div className={` col-md-3 ${styles['card']}`}>
-                        <div className={`${styles['card']}`}>
-                            <span>02</span>
-                            <p>Planificación</p>
-                            <div className={`${styles['separator-line-thick']}`}></div>
-                        </div>
-
-                    </div>
-                    <div className={` col-md-3 ${styles['card']}`}>
-                        <div className={`${styles['card']}`}>
-                            <span>03</span>
-                            <p>Desarrollo</p>
-                            <div className={`${styles['separator-line-thick']}`}></div>
-                        </div>
-
-                    </div>
-                    <div className={` col-md-3 ${styles['card']}`}>
-                        <div className={`${styles['card']}`}>
-                            <span>04</span>
-                            <p>Lanzamiento</p>
-                            <div className={`${styles['separator-line-thick']}`}></div>
-                        </div>
-
-                    </div>
+                    <div className="col-md-1"></div>
                 </div>
-                {/* <div className='row'>
-                    <div className={`${styles['sizeimgLenguaje']}`}>
-
-                        <img src="/home/desktop.svg" alt="" />
-                    </div>
-                </div> */}
-
-
             </div>
-        </div>
+
+            <div className={`container ${styles['border-container']} sin-padding`}>
+                <div className="row pt-5">
+                    <div className="col-md-1 sin-padding"></div>
+                    <div className="col-md centrar sin-padding">
+                        <PurpleSquare imagePath="/home/cards/estrategia.png" />
+                    </div>
+                    <div className="col-md centrar sin-padding">
+                        <PurpleSquare imagePath="/home/cards/planificacion.png" />
+                    </div>
+                    <div className="col-md centrar sin-padding">
+                        <PurpleSquare imagePath="/home/cards/desarrollo.png" />
+                    </div>
+                    <div className="col-md centrar sin-padding">
+                        <PurpleSquare imagePath="/home/cards/lanzamiento.png" />
+                    </div>
+                    <div className="col-md-1 sin-padding"></div>
+                </div>
+            </div>
+        </>
     );
 }

@@ -1,3 +1,25 @@
-body{
-  background: black;
+
+body {
+  --backgroud-color: #170b35;
+  background: var(--backgroud-color) !important;
+  font-family: var(--fontExo2);
+  color: #fff;
+}
+
+.borde-purple {
+  --primaryColor: #9678ff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--primaryColor), 0 0 20px var(--primaryColor), 0 0 30px var(--primaryColor), 0 0 40px var(--primaryColor);
+  background: var(--backgroud-color);
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sin-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

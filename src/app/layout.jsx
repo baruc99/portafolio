@@ -1,14 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './globals.css'
-import { Ubuntu } from 'next/font/google'
+import { font } from './fonts/exo2.jsx';
+
+import './globals.css';
+
 
 import { Navigation } from './componets/Navigation';
 
-const ubuntu = Ubuntu({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 
 export const metadata = {
@@ -20,9 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <body className={ubuntu.className}>
+      <body className={ font.className } >
 
-        <Navigation />
+        <Navigation className={ font.variable } />
 
         {children}
 

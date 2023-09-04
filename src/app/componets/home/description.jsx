@@ -3,7 +3,7 @@ import styles from './description.module.css'
 export function Description() {
     return (
         <>
-            <div className={`container ${styles['border-container']} ${styles['height-description']}`}>
+            <div className={`container pt-5 ${styles['border-container']} ${styles['height-description']}`}>
                 <div className="row sin-padding">
                     <div className="col-md-1 sin-padding"></div>
 

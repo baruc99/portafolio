@@ -7,6 +7,7 @@ import styles from './page.module.css';
 import { useState, useEffect } from 'react';
 import { Description } from './componets/home/description';
 import { Proyects } from './componets/home/Projects';
+import ContactUs from './componets/home/ContactUs';
 
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
 
   return (
     <>
-      <div className={`container ${styles['border-container']}`}>
+      <div id='BoxCode' className={`container ${styles['border-container']}`}>
         <div className={styles['hVideo']}>
           <BackgroundVideo />
           <div className={styles['bgIndex']}>
@@ -71,6 +72,8 @@ export default function Home() {
       <Description />
 
       <Proyects />
+
+      <ContactUs />
       
     </>
   );

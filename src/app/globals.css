@@ -3,7 +3,7 @@ body {
   --backgroud-color: #170b35;
   background: var(--backgroud-color) !important;
   font-family: var(--fontExo2);
-  color: #fff;
+  color: #fff !important;
 }
 
 .borde-purple {
@@ -22,4 +22,23 @@ body {
 .sin-padding {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.alice-carousel__stage-item img{
+  width: 100% !important;
+  border-radius: 2rem;
+}
+
+.alice-carousel__wrapper{
+  height: 100% !important;
+}
+
+.alice-carousel{
+  height: 100%;
+}
+
+.fly{
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: translateY(-500px);
+  opacity: 0;
 }

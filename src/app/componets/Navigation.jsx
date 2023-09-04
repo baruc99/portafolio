@@ -29,9 +29,11 @@ export function Navigation() {
 
 
         <ul className={style.navigation}>
-          {Links.map(({ label, route }) => (
-            <li key={route} className={router === route ? style.active : ''}>
-              <Link href={route}>{label}</Link>
+          {Links.map(({ label, route },index) => (
+            // <li key={route} className={router === route ? style.active : ''}>
+            <li key={route} className={index  === 2 ? style.active : ''}>
+              <Link href={`#${label}`}>{label}</Link>
+              {/* <Link href={route}>{label}</Link> */}
             </li>
           ))}
           <li className={style['nav-item-instagram']}>

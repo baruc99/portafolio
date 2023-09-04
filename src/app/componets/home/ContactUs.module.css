@@ -1,0 +1,198 @@
+.border-container {
+    border-left: 2px solid #a396c1;
+    border-right: 2px solid #a396c1;
+    border-bottom: 2px solid #a396c1;
+    border-radius: 0 0 20px 20px;
+}
+
+.height-contacUs {
+    height: 39rem;
+}
+
+.contexts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.contexts .box:nth-child(1) {
+    flex-basis: calc(22.05%);
+}
+
+.contexts .box:nth-child(2) {
+    flex-basis: calc(46.05%);
+}
+
+.contexts .box:nth-child(3) {
+    flex-basis: calc(31.90%);
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 400;
+    transform: rotate(270deg);
+    margin-top: 10px;
+    width: 180%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.line {
+    width: 35%;
+    height: 2px;
+    background-color: #A396C1;
+}
+
+.aling-contact {
+    flex-direction: column;
+    justify-content: space-around !important;
+}
+
+.aling-contact h2 {
+    font-weight: 2.5rem;
+}
+
+.aling-contact p {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.logo {
+    height: 12rem;
+}
+
+.ig-text {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+.centrar-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centrar-logo a {
+    text-decoration: none;
+
+}
+
+.Btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 85%;
+    height: 15%;
+    border: none;
+    padding: 0px 20px;
+    background-color: #170B35;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: .3s;
+    font-size: 2rem;
+}
+
+.cls-1 {
+    fill: #fff;
+    stroke-width: 0px;
+}
+
+
+.svg {
+    width: 2rem;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: .3s;
+}
+
+.Btn:hover {
+    color: transparent;
+    border-radius: 50px;
+}
+
+.Btn:hover svg {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+}
+
+.Btn:active {
+    /* transform: translate(3px, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212); */
+}
+
+.c-button {
+    position: relative;
+    z-index: 1;
+}
+
+.c-button--gooey {
+    position: relative;
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.c-button--gooey .c-button__blobs div {
+    /* background-color: #7565A1; */
+    background:linear-gradient(to top , #8f1e8f, #4a00e0);
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: transparent;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
+}

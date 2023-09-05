@@ -1,10 +1,17 @@
 // languages.jsx
+import Image from 'next/image';
 import styles from './languages.module.css';
 
 function PurpleSquare({ imagePath }) {
     return (
         <div className={`borde-purple ${styles['square']} centrar`}>
-            <img src={imagePath} alt="" />
+            {/* <img src={imagePath} alt="" /> */}
+            <Image
+                src={imagePath}
+                alt=""
+                width={70} // Ancho en píxeles (ajusta según tus necesidades)
+                height={70} // Altura en píxeles (ajusta según tus necesidades)
+            />
         </div>
     );
 }

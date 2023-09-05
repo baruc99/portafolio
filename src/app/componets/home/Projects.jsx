@@ -4,6 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 import styles from './Projects.module.css';
+import Image from 'next/image';
 
 
 const handleDragStart = (e) => e.preventDefault();
@@ -36,9 +37,15 @@ const urls = [
 
 const items = itemsLength.map((item, index) => {
     return (
-        <div className="item" data-value={index + 1}>
+        <div key={index} className="item" data-value={index + 1}>
             <a href={urls[index]} target="_blank" rel="noopener noreferrer">
-                <img src={`/proyects/imagen-${index}.png`} alt={`Imagen ${index}`} />
+                {/* <img src={`/proyects/imagen-${index}.png`} alt={`Imagen ${index}`} /> */}
+                <Image
+                    src={`/proyects/imagen-${index}.png`}
+                    alt={`Imagen ${index}`}
+                    width={527} // Ancho en píxeles (ajusta según tus necesidades)
+                    height={820} // Altura en píxeles (ajusta según tus necesidades)
+                />
             </a>
         </div>
     );

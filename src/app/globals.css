@@ -26,7 +26,7 @@ body {
 
 .alice-carousel__stage-item img{
   width: 100% !important;
-  border-radius: 2rem;
+  border-radius: 2rem !important;
 }
 
 .alice-carousel__wrapper{

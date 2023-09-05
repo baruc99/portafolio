@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import styles from './ContactUs.module.css'
+import Image from 'next/image';
 // import { useRouter } from 'next/router'
 
 import { useState } from 'react';
 
 function ContactUs() {
-    
+
     const handleClick = () => {
         const rocket = document.querySelector('svg');
 
@@ -86,11 +87,26 @@ function ContactUs() {
                             </div>
                             <div className={`${styles['box']} ${styles['centrar-logo']}`}>
                                 <div>
-                                    <img className={` ${styles['logo']} `} src={'/isotipo.png'} alt="Logo" />
+                                    {/* <img className={` ${styles['logo']} `} src={'/isotipo.png'} alt="Logo" /> */}
+                                    <Image
+                                        src="/isotipo.png" // Ruta relativa a la carpeta 'public'
+                                        alt="Logo"
+                                        width={192} // Ancho en píxeles (ajusta según tus necesidades)
+                                        height={192} // Altura en píxeles (ajusta según tus necesidades)
+                                        className={styles['logo']} // Clase CSS para estilizar la imagen
+                                    />
                                 </div>
                                 <div>
                                     <Link href={'https://www.instagram.com/boxcode00/'} target='_blank'>
-                                        <img className={`${styles['ig-logo']}`} src={'/ig.png'} alt="instagram" />
+                                        {/* <img className={`${styles['ig-logo']}`} src={'/ig.png'} alt="instagram" /> */}
+                                        <Image
+                                            src="/ig.png" // Ruta relativa a la carpeta 'public'
+                                            alt="instagram"
+                                            width={63} // Ancho en píxeles (ajusta según tus necesidades)
+                                            height={62} // Altura en píxeles (ajusta según tus necesidades)
+                                            className={styles['ig-logo']} // Clase CSS para estilizar la imagen
+                                        />
+
                                         <span className={styles['ig-text']}>@boxcode00</span>
                                     </Link>
                                 </div>

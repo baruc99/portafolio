@@ -34,11 +34,10 @@ export default function Home() {
 
     };
 
-
     const timer = setTimeout(typeText, 200);
 
     return () => clearTimeout(timer);
-  }, [currentText, currentParagraph]);
+  }, [currentText, currentParagraph, paragraphs]);
 
   return (
     <>
@@ -74,7 +73,7 @@ export default function Home() {
       <Proyects />
 
       <ContactUs />
-      
+
     </>
   );
 }

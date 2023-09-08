@@ -25,31 +25,35 @@ const onResized = (e) => {
     console.debug(`Item's position after resize: ${e.item}. Event:`, e);
 };
 
-const itemsLength = Array.from({ length: 5 });
+const urls = {
+    wtc: 'http://wtc.veracruz.gob.mx/',
+    unpca: 'https://unpca.org.mx/',
+    fourtinfo: 'http://www.veracruz.gob.mx/cuartoinformedegobierno/'
+}
 
-const urls = [
-    'http://wtc.veracruz.gob.mx/',
-    'https://unpca.org.mx/',
-    'http://www.veracruz.gob.mx/cuartoinformedegobierno/',
-    'https://twitter.com/',
-    'https://www.google.com/',
-]
+const items = Object.entries(urls).map(([imageName, url], index) => (
+    <div key={index} className="item" data-value={index + 1}>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+            <img src={`/proyects/${imageName}.png`} alt={`Imagen ${imageName}`} />
+        </a>
+    </div>
+));
 
-const items = itemsLength.map((item, index) => {
-    return (
-        <div key={index} className="item" data-value={index + 1}>
-            <a href={urls[index]} target="_blank" rel="noopener noreferrer">
-                {/* <img src={`/proyects/imagen-${index}.png`} alt={`Imagen ${index}`} /> */}
-                <Image
-                    src={`/proyects/imagen-${index}.png`}
-                    alt={`Imagen ${index}`}
-                    width={527} // Ancho en píxeles (ajusta según tus necesidades)
-                    height={820} // Altura en píxeles (ajusta según tus necesidades)
-                />
-            </a>
-        </div>
-    );
-});
+// const items = itemsLength.map((item, index) => {
+//     return (
+//         <div key={index} className="item" data-value={index + 1}>
+//             <a href={urls[index]} target="_blank" rel="noopener noreferrer">
+//                 <img src={`/proyects/imagen-${index}.png`} alt={`Imagen ${index}`} />
+//                 {/* <Image
+//                     src={`/proyects/imagen-${index}.png`}
+//                     alt={`Imagen ${index}`}
+//                     width={527} // Ancho en píxeles (ajusta según tus necesidades)
+//                     height={820} // Altura en píxeles (ajusta según tus necesidades)
+//                 /> */}
+//             </a>
+//         </div>
+//     );
+// });
 
 export function Proyects() {
 
@@ -63,7 +67,8 @@ export function Proyects() {
 
     return (
         <>
-            <div id="Proyectos" className={`container pt-5 ${styles['border-container']}`} >
+            <div className={`${styles['border-container']}`}></div>
+            <div id="Proyectos" className={`container pt-5 pb-5 ${styles['border-container']}`} >
                 <div className="row">
                     <div className="col-md-1"></div>
 
@@ -81,7 +86,7 @@ export function Proyects() {
                                                 animationType="fadeout"
                                                 infinite
                                                 touchTracking={false}
-                                                disableDotsControls
+
                                                 mouseTracking
                                                 keyboardNavigation
                                                 items={items}
@@ -102,6 +107,7 @@ export function Proyects() {
                     <div className="col-md-1"></div>
                 </div>
                 <div className="row mt-5"></div>
+                <div className='height-general'></div>
             </div>
         </>
     );

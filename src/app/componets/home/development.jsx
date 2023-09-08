@@ -3,7 +3,7 @@ import styles from './development.module.css';
 export function Development() {
     return (
         <>
-            <div className={`container ${styles['border-container']} ${styles['developement']}`}>
+            <div className={`container pb-5  ${styles['border-container']} ${styles['developement']}`}>
                 <div className="row">
                     <div className="col-md-1"></div>
 

@@ -1,11 +1,28 @@
 import Link from 'next/link'
 import styles from './ContactUs.module.css'
 import Image from 'next/image';
-// import { useRouter } from 'next/router'
 
 import { useState } from 'react';
+import CustomModal from '../form/form';
+
 
 function ContactUs() {
+    
+
+    let btn = document.querySelector("#btnCharlamos");
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        btn.style.zIndex = "1"
+    }
+    const openModal = () => {
+        setIsModalOpen(true);
+        btn.style.zIndex = "-1"
+    };
 
     const handleClick = () => {
         const rocket = document.querySelector('svg');
@@ -14,7 +31,8 @@ function ContactUs() {
 
         setTimeout(() => {
             rocket.classList.remove('fly');
-        }, 3000);
+            openModal()
+        }, 500);
     };
 
 
@@ -66,6 +84,10 @@ function ContactUs() {
                                     </div>
 
                                 </button>
+                                {/* Renderiza el modal si está abierto */}
+                                {/* <CustomModal isOpen={isModalOpen} closeModal={closeModal} /> */}
+                                {isModalOpen && <CustomModal isOpen={isModalOpen} closeModal={closeModal} />}
+
                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style={{ display: 'block', height: 0, width: 0 }}>
                                     <defs>
                                         <filter id="goo">
@@ -87,25 +109,25 @@ function ContactUs() {
                             </div>
                             <div className={`${styles['box']} ${styles['centrar-logo']}`}>
                                 <div>
-                                    {/* <img className={` ${styles['logo']} `} src={'/isotipo.png'} alt="Logo" /> */}
-                                    <Image
+                                    <img className={` ${styles['logo']} `} src={'/isotipo.png'} alt="Logo" />
+                                    {/* <Image
                                         src="/isotipo.png" // Ruta relativa a la carpeta 'public'
                                         alt="Logo"
                                         width={192} // Ancho en píxeles (ajusta según tus necesidades)
                                         height={192} // Altura en píxeles (ajusta según tus necesidades)
                                         className={styles['logo']} // Clase CSS para estilizar la imagen
-                                    />
+                                    /> */}
                                 </div>
                                 <div>
                                     <Link href={'https://www.instagram.com/boxcode00/'} target='_blank'>
-                                        {/* <img className={`${styles['ig-logo']}`} src={'/ig.png'} alt="instagram" /> */}
-                                        <Image
+                                        <img className={`${styles['ig-logo']}`} src={'/ig.png'} alt="instagram" />
+                                        {/* <Image
                                             src="/ig.png" // Ruta relativa a la carpeta 'public'
                                             alt="instagram"
                                             width={63} // Ancho en píxeles (ajusta según tus necesidades)
                                             height={62} // Altura en píxeles (ajusta según tus necesidades)
                                             className={styles['ig-logo']} // Clase CSS para estilizar la imagen
-                                        />
+                                        /> */}
 
                                         <span className={styles['ig-text']}>@boxcode00</span>
                                     </Link>

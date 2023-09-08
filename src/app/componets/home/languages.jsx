@@ -2,17 +2,30 @@
 import Image from 'next/image';
 import styles from './languages.module.css';
 
-function PurpleSquare({ imagePath }) {
+function PurpleSquare({ imagePath, name }) {
+
+    const texts = {
+        estrategia: 'UNA BUENA ESTRATEGIA ES LA CLAVE DEL ÉXITO. ¡LA ENCONTRARÉ!',
+        planificacion: "PLANIFICO CON CONOCIMIENTO. A NADIE LE GUSTAN LAS SORPRESAS DURANTE EL PROCESO",
+        desarrollo: "CADA PROYECTO TIENE PERSONALIDAD PROPIA. ¡SAQUÉMOSLA A RELUCIR!",
+        lanzamiento: "MI COMPROMISO ES OFRECER GARANTÍA Y CONFIABILIDAD HASTA EL FINAL."
+    }
+
     return (
-        <div className={`borde-purple ${styles['square']} centrar`}>
-            {/* <img src={imagePath} alt="" /> */}
+
+        <div className={`borde-purple ${styles['card']} ${styles['hovered-svg']} `}>
             <Image
                 src={imagePath}
-                alt=""
-                width={70} // Ancho en píxeles (ajusta según tus necesidades)
-                height={70} // Altura en píxeles (ajusta según tus necesidades)
+                alt={name}
+                width={70}
+                height={70}
+                className={`${styles['img']}`}
             />
-        </div>
+            <div className={`${styles['textBox']}`}>
+                <p className={`${styles['text']} ${styles['head']}`}>{name.toUpperCase()}</p>
+                <p className={` ${styles.text}  ${ styles.price }`}>{texts[name]}</p>
+            </div>
+        </div >
     );
 }
 
@@ -43,16 +56,16 @@ export function Languages() {
                 <div className="row pt-5">
                     <div className="col-md-1 sin-padding"></div>
                     <div className="col-md centrar sin-padding">
-                        <PurpleSquare imagePath="/home/cards/estrategia.png" />
+                        <PurpleSquare imagePath="/home/cards/svg/estrategia.svg" name="estrategia" />
                     </div>
                     <div className="col-md centrar sin-padding">
-                        <PurpleSquare imagePath="/home/cards/planificacion.png" />
+                        <PurpleSquare imagePath="/home/cards/svg//planificacion.svg" name="planificacion" />
                     </div>
                     <div className="col-md centrar sin-padding">
-                        <PurpleSquare imagePath="/home/cards/desarrollo.png" />
+                        <PurpleSquare imagePath="/home/cards/svg/desarrollo.svg" name="desarrollo" />
                     </div>
                     <div className="col-md centrar sin-padding">
-                        <PurpleSquare imagePath="/home/cards/lanzamiento.png" />
+                        <PurpleSquare imagePath="/home/cards/svg/lanzamiento.svg" name="lanzamiento" />
                     </div>
                     <div className="col-md-1 sin-padding"></div>
                 </div>

@@ -22,7 +22,6 @@
 }
 
 .ig-logo {
-    /* height: 30px; */
     padding: 0 0 0.3rem 0.7rem;
 }
 
@@ -43,17 +42,13 @@
     text-decoration: none;
 }
 
-.navigation a:hover {
-    text-decoration: underline;
-}
+
 
 .active a {
-    /* color: #00cce8; */
     border-radius: 10px;
     border: 2px solid #a396c1;
     font-weight: bold;
     padding: 6px;
-    text-decoration: underline;
 }
 
 .border-container {
@@ -62,3 +57,19 @@
     border-right: 2px solid #a396c1;
     border-radius: 20px 20px 0 0;
 }
+
+.scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    background: #fff;
+    color: #a396c1 !important;
+    transition: 0.5s cubic-bezier(0.4, 0, 1, 1);
+
+}
+
+.scrolled .navigation a {
+    color: #4D418D;
+  }

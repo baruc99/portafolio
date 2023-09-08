@@ -32,7 +32,7 @@
     font-weight: 400;
     gap: 32px;
     height: 4rem;
-    justify-content: end;
+    justify-content: flex-end;
     list-style: none;
     text-transform: capitalize;
 }

@@ -34,26 +34,17 @@ const urls = {
 const items = Object.entries(urls).map(([imageName, url], index) => (
     <div key={index} className="item" data-value={index + 1}>
         <a href={url} target="_blank" rel="noopener noreferrer">
-            <img src={`/proyects/${imageName}.png`} alt={`Imagen ${imageName}`} />
+            {/* <img src={`/proyects/${imageName}.png`} alt={`Imagen ${imageName}`} /> */}
+            <Image
+                src={`/proyects/${imageName}.png`}
+                alt={`Imagen ${imageName}`}
+                width={400} // Ancho deseado
+                height={300} // Alto deseado
+            />
+
         </a>
     </div>
 ));
-
-// const items = itemsLength.map((item, index) => {
-//     return (
-//         <div key={index} className="item" data-value={index + 1}>
-//             <a href={urls[index]} target="_blank" rel="noopener noreferrer">
-//                 <img src={`/proyects/imagen-${index}.png`} alt={`Imagen ${index}`} />
-//                 {/* <Image
-//                     src={`/proyects/imagen-${index}.png`}
-//                     alt={`Imagen ${index}`}
-//                     width={527} // Ancho en píxeles (ajusta según tus necesidades)
-//                     height={820} // Altura en píxeles (ajusta según tus necesidades)
-//                 /> */}
-//             </a>
-//         </div>
-//     );
-// });
 
 export function Proyects() {
 

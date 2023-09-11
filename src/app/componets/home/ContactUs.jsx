@@ -1,10 +1,12 @@
-import Link from 'next/link'
-import styles from './ContactUs.module.css'
+import React, { useEffect, useState } from 'react';
+import Modal from 'react-modal';
 import Image from 'next/image';
-
-import { useEffect, useState } from 'react';
+import { IoClose } from 'react-icons/io5';
+import Link from 'next/link';
+import styles from './ContactUs.module.css';
 import CustomModal from '../form/form';
 
+Modal.setAppElement('#Contactanos');
 
 function ContactUs() {
 
@@ -51,6 +53,8 @@ function ContactUs() {
                 btn.removeEventListener("click", handleClick);
             }
         };
+
+        
     }, []);
 
 

@@ -34,13 +34,13 @@ const urls = {
 const items = Object.entries(urls).map(([imageName, url], index) => (
     <div key={index} className="item" data-value={index + 1}>
         <a href={url} target="_blank" rel="noopener noreferrer">
-            {/* <img src={`/proyects/${imageName}.png`} alt={`Imagen ${imageName}`} /> */}
-            <Image
+            <img src={`/proyects/${imageName}.png`} alt={`Imagen ${imageName}`} />
+            {/* <Image
                 src={`/proyects/${imageName}.png`}
                 alt={`Imagen ${imageName}`}
                 width={400} // Ancho deseado
                 height={300} // Alto deseado
-            />
+            /> */}
 
         </a>
     </div>

@@ -9,15 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coreui/coreui": "^5.0.0-alpha.2",
+    "@coreui/react": "^5.0.0-alpha.0",
+    "@sendgrid/mail": "^7.7.0",
     "bootstrap": "^5.3.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "file-loader": "^6.2.0",
+    "multiparty": "^4.2.3",
     "next": "13.4.10",
+    "nodemailer": "^6.9.5",
     "react": "18.2.0",
     "react-alice-carousel": "^2.7.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-modal": "^3.16.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.21"
   }
 }
